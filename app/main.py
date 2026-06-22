@@ -8,6 +8,7 @@ and plugs in our route modules. Run it with:
 """
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.api.routes import predictions, alerts
 
@@ -19,6 +20,17 @@ app = FastAPI(
         "early-warning alerts that integrate with the ERP."
     ),
     version="1.0.0",
+)
+
+# ── CORS ────────────────────────────────────────────────────────────
+# Allow browser-based frontends (running on any domain) to call this API.
+# Tighten allow_origins to the real frontend URL(s) in production if needed.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
