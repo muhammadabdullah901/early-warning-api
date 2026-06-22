@@ -39,6 +39,18 @@ _FAKE_STUDENTS = {
         "fee_overdue_days": 0,
         "engagement_score": 0.9,
     },
+    # 👇 Naya student (testing ke liye add kiya) — fee risk + kam attendance
+    "STU-1003": {
+        "student_id": "STU-1003",
+        "name": "Bilal Hussain",
+        "attendance_percentage": 70,
+        "current_gpa": 2.4,
+        "assignments_submitted": 5,
+        "assignments_total": 10,
+        "backlogs": 1,
+        "fee_overdue_days": 60,
+        "engagement_score": 0.5,
+    },
 }
 
 
