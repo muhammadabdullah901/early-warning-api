@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment secrets (NEVER commit real keys!)
+.env
+
+# Test cache
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Editor / local tooling
+.claude/

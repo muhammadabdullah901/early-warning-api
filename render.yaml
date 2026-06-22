@@ -1,0 +1,20 @@
+# Render.com deployment "blueprint".
+# When you connect this repo on Render, it reads this file and configures
+# everything automatically — you don't have to type the commands by hand.
+
+services:
+  - type: web
+    name: early-warning-api
+    runtime: python
+    plan: free
+    # Install dependencies
+    buildCommand: "pip install -r requirements.txt"
+    # Start the server. Render gives us the port in the $PORT variable.
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      # Render's Python version (your local 3.14 is very new; 3.12 is rock-solid on Render)
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      # Keep using the mock ERP until you have real ERP details
+      - key: ERP_MOCK_MODE
+        value: "true"

@@ -1,0 +1,10 @@
+# ── Project dependencies ───────────────────────────────────────────
+# Install all of these with:  pip install -r requirements.txt
+
+fastapi              # The web framework that powers our API
+uvicorn[standard]    # The server that actually runs the app
+pydantic             # Data validation (checks the input is correct)
+pydantic-settings    # Reads settings from the .env file
+httpx                # Used to call the real ERP system over the internet
+python-dotenv        # Loads the .env file
+pytest               # For running our automated tests
