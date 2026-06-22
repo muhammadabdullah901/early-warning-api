@@ -39,7 +39,8 @@ _FAKE_STUDENTS = {
         "fee_overdue_days": 0,
         "engagement_score": 0.9,
     },
-    # 👇 Naya student (testing ke liye add kiya) — fee risk + kam attendance
+    # 👇 Testing ke liye add kiye gaye students (alag-alag scenarios)
+    # Medium risk + fee overdue
     "STU-1003": {
         "student_id": "STU-1003",
         "name": "Bilal Hussain",
@@ -50,6 +51,18 @@ _FAKE_STUDENTS = {
         "backlogs": 1,
         "fee_overdue_days": 60,
         "engagement_score": 0.5,
+    },
+    # High dropout risk — bahut kam attendance, kam GPA, kam engagement
+    "STU-1004": {
+        "student_id": "STU-1004",
+        "name": "Hina Raza",
+        "attendance_percentage": 40,
+        "current_gpa": 1.5,
+        "assignments_submitted": 2,
+        "assignments_total": 10,
+        "backlogs": 4,
+        "fee_overdue_days": 90,
+        "engagement_score": 0.2,
     },
 }
 
