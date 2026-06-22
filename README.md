@@ -1,3 +1,13 @@
+---
+title: Early Warning API
+emoji: 🎓
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Early Warning System & Prediction API
 
 A FastAPI backend for a Student ERP. It exposes prediction endpoints
